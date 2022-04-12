@@ -34,7 +34,7 @@ $ python pylemanager.py
 
 ## third party libraries
 
--[x] simple_term_menu
+- [x] simple_term_menu
 - [x] art
 - [x] tqdm
 - [x] time
