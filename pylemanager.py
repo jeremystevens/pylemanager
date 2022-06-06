@@ -1,4 +1,51 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# Copyright (c) 2022 Jeremy Stevens <jeremiahstevens@gmail.com>
+#
+# Permission is hereby granted, free of charge, to any person obtaining #a copy
+# of this software and associated documentation files (the "Software"), #to deal
+# in the Software without restriction, including without limitation the #rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or #sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be #included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, #EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF #MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR #OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, #ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER #DEALINGS IN THE
+# SOFTWARE.
+#
+# ==============================================================================
+version = "1.0.0"
+# ==============================================================================
+
+#    --- CHANGELOG: ----
+#
+#    Changes in: V1.0.0
+#    -------------------
+#  - recursively search for files by name
+#  - recursively search for files by file type.
+#  - copy files / backup files
+#  - display directory tree
+#  - Shred files (rewrite data to 0's)
+#  - Get file info
+
+
+# dependencies List:
+#   - simple_term_menu
+#   - art
+#   - tqdm
+#   - time
+#   - os
+#   - glob
+#   - sys
+#   - shutil
+
 import shutil
 import art as art
 from simple_term_menu import TerminalMenu
@@ -10,34 +57,6 @@ import os
 import glob
 import sys
 
-
-# author: @_JeremyStevens_
-# copyright: MIT License
-# license: https://opensource.org/licenses/MIT
-# source: http://github.com/jeremystevens/pylemanager
-# date: 2022-04-11
-# version: 1.0
-# description: command line tool for managing files and folders
-# usage: python3 pylemanager.py
-# email:
-# license: MIT
-# disclaimer: I am not responsible for any damage caused by this tool
-#             use at your own risk
-# status: working
-# developer: Jeremy Stevens
-# contact: jeremiahstevens@gmail.com
-# dependencies:
-#   - simple_term_menu
-#   - art
-#   - tqdm
-#   - time
-#   - os
-#   - glob
-#   - sys
-#   - shutil
-
-# TODO: add more features
-# TODO: fix bugs
 
 # get file info function
 def get_file_info(file_path):
@@ -260,7 +279,6 @@ def main():
         delete()
     elif menu_entry_index == 3:
         more_options()
-
 
 if __name__ == "__main__":
     main()
