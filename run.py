@@ -3,7 +3,6 @@
 import platform
 import os
 
-
 # Detect OS and run file accordingly
 System = platform.system()
 if System == "Windows":
